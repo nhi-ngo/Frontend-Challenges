@@ -85,7 +85,7 @@ img {
 /* Header */
 
 header {
-	background-image: url(/images/bg-hero-desktop.svg);
+	background-image: url(images/bg-hero-desktop.svg);
 	background-size: cover;
 	background-position: center;
 	background-color: var(--paleCyan);
