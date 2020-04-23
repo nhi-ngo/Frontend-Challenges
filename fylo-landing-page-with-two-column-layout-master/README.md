@@ -4,4 +4,4 @@
 
 ## LIVE LINK
 
-**https://nhingo.com/Frontend-Challenges/fylo-lannding-page/**
+**https://nhingo.com/Frontend-Challenges/fylo-landing-page/**
