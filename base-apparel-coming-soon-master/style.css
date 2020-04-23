@@ -1,0 +1,31 @@
+:root {
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+}
+
+.container {
+	margin: 0 auto;
+	padding: 30px;
+	width: 1000px;
+	max-width: 100%;
+}
+
+.attribution {
+	font-size: 11px;
+	text-align: center;
+}
+
+.attribution a {
+	color: hsl(228, 45%, 44%);
+}
