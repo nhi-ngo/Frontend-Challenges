@@ -337,10 +337,6 @@ span {
 		background-image: url(./images/bg-curve-mobile.svg);
 	}
 
-	.mobile-reverse {
-		flex-direction: column-reverse;
-	}
-
 	footer .container {
 		padding-left: 30px;
 		text-align: left;

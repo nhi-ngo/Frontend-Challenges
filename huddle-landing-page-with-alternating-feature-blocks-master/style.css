@@ -220,7 +220,7 @@ span {
 	}
 
 	footer .flex .included-icons {
-		flex-basis: 0;
+		flex: auto;
 	}
 
 	.attribution {
