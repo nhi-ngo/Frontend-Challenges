@@ -1,42 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Intro component with sign up form</title>
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="stylesheet" href="style.css" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+		<title>Frontend Mentor | Intro component with sign up form</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="section-left">
+				<h1>
+					Learn to code by
+					<br />
+					watching others
+				</h1>
+				<p>
+					See how experienced developers solve problems in real-time. Watching scripted tutorials is great, but
+					understanding how developers think is invaluable.
+				</p>
+			</div>
 
-  Learn to code by watching others
+			<div class="section-right">
+				<button class="bg-purple">
+					<strong>Try it free 7 days</strong><span class="text-light"> then $20/mo. thereafter</span>
+				</button>
 
-  See how experienced developers solve problems in real-time. Watching scripted tutorials is great, 
-  but understanding how developers think is invaluable. 
+				<form id="form">
+					<div class="form-control">
+						<input type="text" id="firstname" placeholder="First Name" />
+						<img class="icon-error" src="./images/icon-error.svg" alt="error" />
+						<small>First Name cannot be empty</small>
+					</div>
 
-  Try it free 7 days then $20/mo. thereafter
+					<div class="form-control">
+						<input type="text" id="lastname" placeholder="Last Name" />
+						<img class="icon-error" src="./images/icon-error.svg" alt="error" />
+						<small>Last Name cannot be empty</small>
+					</div>
 
-  First Name 
-  Last Name 
-  Email Address
-  Password
+					<div class="form-control">
+						<input type="email" id="email" placeholder="Email Address" />
+						<img class="icon-error" src="./images/icon-error.svg" alt="error" />
+						<small>Looks like this is not an email</small>
+					</div>
 
-  Claim your free trial 
+					<div class="form-control">
+						<input type="text" id="password" placeholder="Password" />
+						<img class="icon-error" src="./images/icon-error.svg" alt="error" />
+						<small>Password cannot be empty</small>
+					</div>
 
-  By clicking the button, you are agreeing to our Terms and Services
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+					<button class="bg-green">Claim your free trial</button>
+
+					<small class="terms-and-conditions">
+						By clicking the button, you are agreeing to our <a href="#">Terms and Services</a>
+					</small>
+				</form>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
 </html>
