@@ -1,34 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Ping coming soon page</title>
+		<title>Frontend Mentor | Ping coming soon page</title>
+	</head>
+	<body>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+		<header>
+			<div class="container">
+				<img src="./images/logo.svg" alt="" />
+				<h2>We are launching <span>soon!</span></h2>
+				<h4>Subscribe and get notified</h4>
+				<form action="">
+					<input type="email" id="email" placeholder="Your email address..." />
+					<small>Please provide a valid email address!</small>
+					<button>Notify Me</button>
+				</form>
+			</div>
+		</header>
 
-  We are launching soon!
+		<section>
+			<div class="container">
+				<img src="./images/illustration-dashboard.png" alt="" />
+			</div>
+		</section>
 
-  Subscribe and get notified
-
-  Notify Me
-
-  &copy; Copyright Ping. All rights reserved.
-
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+		<footer>
+			<div class="container">
+				<ul class="flex social-media">
+					<li>
+						<a class="circle" href="#"><i class="fab fa-facebook"></i></a>
+					</li>
+					<li>
+						<a class="circle" href="#"><i class="fab fa-twitter"></i></a>
+					</li>
+					<li>
+						<a class="circle" href="#"><i class="fab fa-instagram"></i></a>
+					</li>
+				</ul>
+				<p>&copy; Copyright Ping. All rights reserved.</p>
+			</div>
+    </footer>
+    <script src="script.js"></script>
+	</body>
 </html>
