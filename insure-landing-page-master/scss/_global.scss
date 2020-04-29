@@ -1,0 +1,82 @@
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: $font__primary;
+	background-color: $offWhite;
+}
+
+.container {
+	width: 1430px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 20px;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+button {
+  background-color: $offWhite;
+  color: $violet;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 13px 50px;
+
+}
+
+// Hero section
+.hero__nav {
+	justify-content: space-between;
+
+	&__list {
+		list-style-type: none;
+	}
+
+	&__item {
+		margin-right: 20px;
+	}
+
+	&__link {
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 0.8rem;
+		color: $grayishViolet;
+		font-weight: 700;
+
+		&:hover {
+			color: $darkViolet;
+		}
+	}
+}
+
+.hero__info {
+	background-color: $violet;
+
+	& > div {
+		flex: 1;
+	}
+
+	&__heading {
+		font-family: $font__secondary;
+		color: $headings__color;
+		font-size: $headings__size;
+	}
+
+	& p {
+		color: darken(#fff, 20%);
+		font-size: $paragraph;
+	}
+}
