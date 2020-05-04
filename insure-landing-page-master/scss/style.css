@@ -179,7 +179,7 @@ button:hover {
 }
 
 .main .container {
-  padding: 130px;
+  padding: 130px 130px 100px;
 }
 
 .main__heading {
@@ -223,5 +223,50 @@ button:hover {
 .main p {
   font-size: 0.9rem;
   color: #837d87;
+}
+
+.how-we-work {
+  background-color: #2d2640;
+  width: 970px;
+  margin: 0 auto 100px;
+  padding: 55px 60px;
+  position: relative;
+}
+
+.how-we-work::before {
+  content: '';
+  position: absolute;
+  background-image: url(../images/bg-pattern-intro-right-desktop.svg);
+  background-repeat: no-repeat;
+  width: 30%;
+  height: 100%;
+  top: 0px;
+  right: 0px;
+}
+
+.how-we-work .flex {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.how-we-work h2 {
+  font-family: "DM Serif Display", serif;
+  color: #fafafa;
+  font-size: 3.4rem;
+  line-height: 0.9;
+  font-weight: 400;
+  margin: 80px 0 0;
+  position: relative;
+  font-size: 2.5rem;
+  margin: 0;
+  line-height: 1;
+}
+
+.how-we-work h2::before {
+  content: '';
+  height: 1px;
+  width: 130px;
+  position: absolute;
 }
 /*# sourceMappingURL=style.css.map */

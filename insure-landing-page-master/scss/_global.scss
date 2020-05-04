@@ -27,12 +27,12 @@ body {
 }
 
 .flex > div {
-  flex: 1;
-  margin-right: 15px;
+	flex: 1;
+	margin-right: 15px;
 
-  &:last-of-type{
-    margin-right: 0;
-  }
+	&:last-of-type {
+		margin-right: 0;
+	}
 }
 
 button {
@@ -163,7 +163,6 @@ button {
 .pattern::after {
 	content: '';
 	position: absolute;
-
 	background-image: url(../images/bg-pattern-intro-right-desktop.svg);
 	background-repeat: no-repeat;
 	width: 200px;
@@ -175,38 +174,68 @@ button {
 // Main section
 
 .main .container {
-	padding: 130px;
+	padding: 130px 130px 100px;
 }
 
 .main {
 	&__heading {
 		@include heading;
-    color: inherit;
-    margin-top: 150px;
-    padding: 50px 0 80px;
-
+		color: inherit;
+		margin-top: 150px;
+		padding: 50px 0 80px;
 
 		&::before {
 			top: 0;
 			left: 0;
 			background-color: $grayishViolet;
 		}
-  }
+	}
 
-  img {
-    height: 70px;
-    width: 70px;
-  }
+	img {
+		height: 70px;
+		width: 70px;
+	}
 
-  h3 {
-    font-family: $heading__font;
-    font-weight: $heading__weight;
-    font-size: 1.4rem;
-    margin: 10px 0;
-  }
+	h3 {
+		font-family: $heading__font;
+		font-weight: $heading__weight;
+		font-size: 1.4rem;
+		margin: 10px 0;
+	}
 
-  p {
-    font-size: $paragraph;
-    color: $grayishViolet;
-  }
+	p {
+		font-size: $paragraph;
+		color: $grayishViolet;
+	}
+}
+
+// How-we-work section
+.how-we-work {
+	background-color: $violet;
+	width: 970px;
+	margin: 0 auto 100px;
+  padding: 55px 60px;
+  position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		background-image: url(../images/bg-pattern-intro-right-desktop.svg);
+		background-repeat: no-repeat;
+		width: 30%;
+		height: 100%;
+		top: 0px;
+		right: 0px;
+	}
+
+	.flex {
+		justify-content: space-between;
+	}
+
+	h2 {
+		@include heading;
+		font-size: 2.5rem;
+		margin: 0;
+		line-height: 1;
+	}
 }
