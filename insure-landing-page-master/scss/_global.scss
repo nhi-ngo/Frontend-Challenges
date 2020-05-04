@@ -15,16 +15,24 @@ body {
 }
 
 .container {
-	width: 1380px;
+	width: 1230px;
 	max-width: 100%;
 	margin: 0 auto;
-	padding: 30px 80px;
 }
 
 .flex {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.flex > div {
+  flex: 1;
+  margin-right: 15px;
+
+  &:last-of-type{
+    margin-right: 0;
+  }
 }
 
 button {
@@ -42,6 +50,23 @@ button {
 	&:hover {
 		color: $violet;
 		background-color: $offWhite;
+	}
+}
+
+@mixin heading {
+	font-family: $font__secondary;
+	color: $headings__color;
+	font-size: $headings__size;
+	line-height: 0.9;
+	font-weight: $heading__weight;
+	margin: 80px 0 0;
+	position: relative;
+
+	&::before {
+		content: '';
+		height: 1px;
+		width: 130px;
+		position: absolute;
 	}
 }
 
@@ -97,13 +122,13 @@ button {
 	}
 
 	&__heading {
-		font-family: $font__secondary;
-		color: $headings__color;
-		font-size: $headings__size;
-		line-height: 0.9;
-		font-weight: $heading__weight;
-		margin: 80px 0 0;
-		position: relative;
+		@include heading;
+
+		&::before {
+			top: -50px;
+			left: 0;
+			background-color: $offWhite;
+		}
 	}
 
 	& p {
@@ -137,27 +162,51 @@ button {
 
 .pattern::after {
 	content: '';
-  position: absolute;
+	position: absolute;
 
 	background-image: url(../images/bg-pattern-intro-right-desktop.svg);
 	background-repeat: no-repeat;
 	width: 200px;
 	height: 400px;
 	top: 0px;
-  right: 0px;
-}
-
-.hero__info__heading::before {
-	content: '';
-	height: 1px;
-	width: 130px;
-	position: absolute;
-	top: -50px;
-	left: 0;
-	background-color: $offWhite;
+	right: 0px;
 }
 
 // Main section
 
 .main .container {
+	padding: 130px;
+}
+
+.main {
+	&__heading {
+		@include heading;
+    color: inherit;
+    margin-top: 150px;
+    padding: 50px 0 80px;
+
+
+		&::before {
+			top: 0;
+			left: 0;
+			background-color: $grayishViolet;
+		}
+  }
+
+  img {
+    height: 70px;
+    width: 70px;
+  }
+
+  h3 {
+    font-family: $heading__font;
+    font-weight: $heading__weight;
+    font-size: 1.4rem;
+    margin: 10px 0;
+  }
+
+  p {
+    font-size: $paragraph;
+    color: $grayishViolet;
+  }
 }
