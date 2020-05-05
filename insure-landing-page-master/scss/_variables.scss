@@ -19,3 +19,25 @@ $headings__color: hsl(0, 0%, 98%);
 $headings__size: 3.4rem;
 $heading__weight: 400;
 $heading__font: $font__secondary;
+
+// Media Queries
+$screen-lg: 950px;
+$screen-md: 750px;
+
+@mixin custom($screen) {
+	@media (max-width: $screen+'px') {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media (max-width: #{$screen-lg}) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media (max-width: #{$screen-md}) {
+		@content;
+	}
+}

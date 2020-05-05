@@ -18,6 +18,10 @@ body {
 	width: 1230px;
 	max-width: 100%;
 	margin: 0 auto;
+
+	@include md {
+		// text-align: center;
+	}
 }
 
 .flex {
@@ -74,7 +78,7 @@ button {
 
 .hero__nav {
 	justify-content: space-between;
-	padding: 0 130px 10px;
+	padding: 0 100px 10px;
 
 	&__list {
 		list-style-type: none;
@@ -114,39 +118,87 @@ button {
 
 .hero__info {
 	background-color: $violet;
-	padding: 50px 130px 100px;
+	padding: 50px 100px 100px;
 	position: relative;
 
+	@include custom(1220) {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	@include lg {
+		flex-direction: column-reverse;
+	}
+
 	&__desc {
-		width: 485px;
+		width: 45%;
+
+		@include custom(1220) {
+			width: 500px;
+		}
 	}
 
 	&__heading {
 		@include heading;
 
 		&::before {
-			top: -50px;
+			top: -30%;
 			left: 0;
 			background-color: $offWhite;
+
+			@include lg {
+				display: none;
+			}
 		}
 	}
 
 	& p {
 		color: darken(#fff, 20%);
 		font-size: $paragraph;
-		margin: 35px 0;
+		margin: 30px 0;
 	}
 
 	&__img {
 		position: absolute;
-		right: 130px;
-		top: 80px;
+		right: 65px;
+		top: 20%;
+
+		@include custom(1230) {
+			position: relative;
+			padding: 50px 0 0 100px;
+		}
+
+		@include lg {
+			padding-left: 130px;
+		}
+
+		@include md {
+			display: none;
+		}
 
 		img {
-			width: 450px;
-			height: 550px;
+			// width: 450px;
+			// height: 550px;
+			width: 90%;
+
+			@include custom(1230) {
+				width: 100%;
+			}
 		}
 	}
+}
+
+.hero__info__img__mobile {
+	display: none;
+
+	@include md {
+    display: flex;
+  }
+
+  img {
+    width: 100%;
+  }
 }
 
 .pattern::before {
@@ -154,8 +206,8 @@ button {
 	position: absolute;
 	background-image: url(../images/bg-pattern-intro-left-desktop.svg);
 	background-repeat: no-repeat;
-	width: 200px;
-	height: 500px;
+	width: 30%;
+	height: 100%;
 	bottom: -68%;
 	left: 0;
 }
@@ -165,8 +217,9 @@ button {
 	position: absolute;
 	background-image: url(../images/bg-pattern-intro-right-desktop.svg);
 	background-repeat: no-repeat;
-	width: 200px;
-	height: 400px;
+	background-position: left top;
+	width: 30%;
+	height: 100%;
 	top: 0px;
 	right: 0px;
 }
@@ -174,7 +227,7 @@ button {
 // Main section
 
 .main .container {
-	padding: 130px 130px 100px;
+	padding: 130px 100px 100px;
 }
 
 .main {
@@ -210,22 +263,18 @@ button {
 }
 
 // How-we-work section
+
 .how-we-work {
 	background-color: $violet;
-	width: 970px;
-	margin: 0 auto 100px;
-  padding: 55px 60px;
-  position: relative;
+	background-image: url(../images/bg-pattern-intro-right-desktop.svg);
+	background-repeat: no-repeat;
+	background-position: center right;
+	width: 1030px;
+	margin: 0 auto 120px;
+	padding: 70px;
 
-	&::before {
-		content: '';
-		position: absolute;
-		background-image: url(../images/bg-pattern-intro-right-desktop.svg);
-		background-repeat: no-repeat;
-		width: 30%;
-		height: 100%;
-		top: 0px;
-		right: 0px;
+	@include lg {
+		width: 100%;
 	}
 
 	.flex {
@@ -237,5 +286,61 @@ button {
 		font-size: 2.5rem;
 		margin: 0;
 		line-height: 1;
+	}
+}
+
+// Footer section
+footer .container {
+	padding: 50px 100px;
+	background-image: url(../images/bg-pattern-footer-desktop.svg);
+	background-repeat: no-repeat;
+	background-color: rgba(0, 0, 0, 0.015);
+}
+
+.social-media {
+	justify-content: space-between;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+	ul > a {
+		margin-right: 15px;
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+
+		img {
+			width: 20px;
+			height: 20px;
+		}
+	}
+}
+
+.footer__nav {
+	align-items: flex-start;
+
+	&__list {
+		flex: 1;
+		list-style-type: none;
+		padding-left: 0;
+	}
+
+	&__link {
+		text-decoration: none;
+		text-transform: uppercase;
+		font-size: 0.8rem;
+		color: $violet;
+		font-weight: 700;
+
+		&:hover {
+			color: $grayishViolet;
+		}
+	}
+
+	& .text-gray {
+		color: $grayishViolet;
+
+		&:hover {
+			color: $violet;
+		}
 	}
 }
