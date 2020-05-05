@@ -13,17 +13,23 @@
 			<div class="container">
 				<nav class="flex hero__nav">
 					<img class="hero__logo" src="./images/logo.svg" alt="logo" />
-					<ul class="flex hero__nav__list">
+
+					<button id="hamburger" class="hamburger">
+						<img class="open" src="./images/icon-hamburger.svg" alt="icon-hamburger" />
+						<img class="close" src="./images/icon-close.svg" alt="icon-close" />
+					</button>
+
+					<ul class="flex hero__nav__list" id="menu">
 						<li class="hero__nav__item"><a class="hero__nav__link" href="#how-we-work">How we work</a></li>
 						<li class="hero__nav__item"><a class="hero__nav__link" href="#">Blog</a></li>
 						<li class="hero__nav__item"><a class="hero__nav__link" href="#">Account</a></li>
-						<li class="hero__nav__item border"><a class="hero__nav__link border" href="#">View plans</a></li>
+						<li class="hero__nav__item border"><a class="hero__nav__link border btn btn-reverse" href="#">View plans</a></li>
 					</ul>
-        </nav>
+				</nav>
 
 				<div class="hero__info__img__mobile">
 					<img src="./images/image-intro-mobile.jpg" alt="" />
-        </div>
+				</div>
 
 				<div class="hero__info">
 					<div class="hero__info__desc">
@@ -134,6 +140,7 @@
 					</ul>
 				</div>
 			</div>
-		</footer>
+    </footer>
+    <script src="script.js"></script>
 	</body>
 </html>

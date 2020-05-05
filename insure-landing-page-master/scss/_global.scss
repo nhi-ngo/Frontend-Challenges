@@ -11,7 +11,8 @@ html {
 body {
 	font-family: $font__primary;
 	background-color: $offWhite;
-	line-height: 1.7;
+  line-height: 1.7;
+  margin: 0;
 }
 
 .container {
@@ -20,7 +21,7 @@ body {
 	margin: 0 auto;
 
 	@include md {
-		// text-align: center;
+		text-align: center;
 	}
 }
 
@@ -28,6 +29,10 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
+	@include md {
+		flex-direction: column;
+	}
 }
 
 .flex > div {
@@ -39,7 +44,8 @@ body {
 	}
 }
 
-button {
+button,
+.btn {
 	background-color: rgba(0, 0, 0, 0);
 	border: 1px solid $offWhite;
 	color: darken(#fff, 10%);
@@ -50,6 +56,7 @@ button {
 	padding: 10px 25px;
 	outline: none;
 	cursor: pointer;
+	display: inline-block;
 
 	&:hover {
 		color: $violet;
@@ -79,13 +86,75 @@ button {
 .hero__nav {
 	justify-content: space-between;
 	padding: 0 100px 10px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	z-index: 100;
+	background-color: $offWhite;
+
+	@include lg {
+		padding: 0 20px;
+	}
+
+	@include md {
+		flex-direction: row;
+	}
+
+	.hamburger {
+		display: none;
+
+		&:focus {
+			outline: none;
+		}
+
+		@include md {
+      display: flex;
+      border: 0;
+      cursor: pointer;
+
+			.close {
+				display: none;
+			}
+
+			&.show .open {
+				display: none;
+			}
+
+			&.show .close {
+				display: block;
+			}
+		}
+	}
 
 	&__list {
 		list-style-type: none;
+
+		@include md {
+			display: none;
+
+			&.show {
+				background-color: $violet;
+        display: flex;
+        justify-content: flex-start;
+				position: fixed;
+				padding-top: 30px;
+				margin: 0;
+				top: 50px;
+				left: 0;
+				width: 100vw;
+				height: calc(100vh - 50px);
+				z-index: 100;
+			}
+		}
 	}
 
 	&__item {
 		margin-right: 20px;
+
+		@include md {
+			margin: 20px 0;
+		}
 
 		&:last-of-type {
 			margin-right: 0;
@@ -99,10 +168,24 @@ button {
 		color: $grayishViolet;
 		font-weight: 700;
 
+		@include md {
+			color: $offWhite;
+
+			.btn-reverse {
+				border-color: #fff;
+				color: #fff;
+			}
+		}
+
 		&.border {
 			border: 1px solid $violet;
 			padding: 9px 25px;
 			color: $violet;
+
+			@include md {
+				color: #fff;
+				border: 1px solid #fff;
+			}
 
 			&:hover {
 				color: #fff;
@@ -112,13 +195,17 @@ button {
 
 		&:hover {
 			color: $darkViolet;
+
+			@include md {
+				color: #fff;
+			}
 		}
 	}
 }
 
 .hero__info {
 	background-color: $violet;
-	padding: 50px 100px 100px;
+	padding: 150px 100px 150px;
 	position: relative;
 
 	@include custom(1220) {
@@ -157,6 +244,10 @@ button {
 		color: darken(#fff, 20%);
 		font-size: $paragraph;
 		margin: 30px 0;
+
+		@include md {
+			margin: 30px;
+		}
 	}
 
 	&__img {
@@ -178,8 +269,6 @@ button {
 		}
 
 		img {
-			// width: 450px;
-			// height: 550px;
 			width: 90%;
 
 			@include custom(1230) {
@@ -193,12 +282,12 @@ button {
 	display: none;
 
 	@include md {
-    display: flex;
-  }
+		display: flex;
+	}
 
-  img {
-    width: 100%;
-  }
+	img {
+		width: 100%;
+	}
 }
 
 .pattern::before {
@@ -210,6 +299,12 @@ button {
 	height: 100%;
 	bottom: -68%;
 	left: 0;
+
+	@include md {
+		height: 40%;
+		top: 0;
+		transform: rotate(90deg);
+	}
 }
 
 .pattern::after {
@@ -220,8 +315,12 @@ button {
 	background-position: left top;
 	width: 30%;
 	height: 100%;
-	top: 0px;
-	right: 0px;
+	top: 0;
+	right: 0;
+
+	@include md {
+		top: 70%;
+	}
 }
 
 // Main section
@@ -231,16 +330,29 @@ button {
 }
 
 .main {
+	.flex {
+		align-items: flex-start;
+	}
+
 	&__heading {
 		@include heading;
 		color: inherit;
 		margin-top: 150px;
 		padding: 50px 0 80px;
 
+		@include lg {
+			margin-top: 50px;
+		}
+
 		&::before {
 			top: 0;
 			left: 0;
 			background-color: $grayishViolet;
+
+			@include md {
+				width: 170px;
+				left: 35%;
+			}
 		}
 	}
 
@@ -286,6 +398,10 @@ button {
 		font-size: 2.5rem;
 		margin: 0;
 		line-height: 1;
+
+		@include md {
+			margin-bottom: 50px;
+		}
 	}
 }
 
@@ -300,6 +416,13 @@ footer .container {
 .social-media {
 	justify-content: space-between;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+	ul {
+		@include md {
+			flex-direction: row;
+			padding: 10px 0 0 0;
+		}
+	}
 
 	ul > a {
 		margin-right: 15px;
@@ -317,6 +440,10 @@ footer .container {
 
 .footer__nav {
 	align-items: flex-start;
+
+	@include md {
+		align-items: center;
+	}
 
 	&__list {
 		flex: 1;
