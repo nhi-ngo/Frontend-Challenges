@@ -1,8 +1,6 @@
 const btnSwitch = document.querySelector('#switch');
-const priceAnnually = Array.from(document.querySelectorAll('.price-annually'));
-const priceMonthly = Array.from(document.querySelectorAll('.price-monthly'));
+const container = document.querySelector('.container');
 
-btnSwitch.addEventListener('click', () => {
-  priceAnnually.forEach(el => el.classList.toggle('close'));
-  priceMonthly.forEach(el => el.classList.toggle('open'));
+btnSwitch.addEventListener('change', () => {
+  container.classList.toggle('show-monthly');
 });

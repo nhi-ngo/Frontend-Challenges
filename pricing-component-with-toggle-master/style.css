@@ -120,15 +120,15 @@ input:checked + label:after {
 }
 
 .price-monthly {
-  display: none;
+	display: none;
 }
 
-.price-annually.close {
-  display: none;
+.show-monthly .price-monthly {
+	display: block;
 }
 
-.price-monthly.open {
-  display: block;
+.show-monthly .price-annually {
+	display: none;
 }
 
 .card {
