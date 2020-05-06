@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+:root {
+	--veryLightBlue: hsl(240, 78%, 98%);
+	--lightBlue: hsl(234, 14%, 74%);
+	--grayishBlue: hsl(233, 13%, 49%);
+	--darkBlue: hsl(232, 13%, 33%);
+}
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.1rem;
+	letter-spacing: 0.7px;
+	margin: 0;
+	background-color: var(--veryLightBlue);
+	color: var(--grayishBlue);
+	position: relative;
+	text-align: center;
+	height: 100vh;
+	overflow: hidden;
+	/* min-height: 100vh; */
+	/* overflow-y: hidden; */
+}
+
+body * {
+	z-index: 1;
+}
+
+body:after {
+	content: '';
+	background-image: url(./images/bg-top.svg);
+	background-repeat: no-repeat;
+	background-position: top right;
+	position: absolute;
+	top: -50px;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+}
+
+body::before {
+	content: '';
+	background-image: url(./images/bg-bottom.svg);
+	background-repeat: no-repeat;
+	background-position: bottom left;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 0;
+}
+
+header {
+	margin: 50px auto 20px;
+}
+
+header h1 {
+	font-size: 2.5rem;
+}
+
+header p {
+	color: var(--lightBlue);
+}
+
+header i {
+	background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-size: 50px;
+	padding: 0 25px;
+	cursor: pointer;
+}
+
+.container {
+	width: 100vw;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 40px;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+.price-monthly {
+	display: none;
+}
+
+.card {
+	background: #fff;
+	padding: 35px;
+	border-radius: 10px;
+}
+
+.card h4 {
+	font-size: 1.4rem;
+}
+
+.card .price {
+	font-size: 5.2rem;
+	margin: 0;
+	color: var(--darkBlue);
+}
+
+.card ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+.card ul li {
+	padding: 20px 0;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.card ul li:first-child {
+	border-top: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.card.bg-blue {
+	background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+	color: #fff;
+	padding: 65px 35px;
+}
+
+.card.bg-blue .price {
+	color: #fff;
+}
+
+.card.bg-blue ul li {
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card.bg-blue ul li:first-child {
+	border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card.bg-blue button {
+	background: #fff;
+	color: hsl(236, 72%, 69%);
+}
+
+button {
+	background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+	border: 1px solid hsl(236, 72%, 79%);
+	border-radius: 10px;
+	outline: none;
+	text-transform: uppercase;
+	cursor: pointer;
+	font-size: inherit;
+	font-family: inherit;
+	letter-spacing: 1.5px;
+	color: #fff;
+	padding: 15px 100px;
+	margin-top: 15px;
+}
+
+@media screen and (max-width: 1314px) {
+	body {
+		overflow-y: scroll;
+	}
+
+	body::before {
+		display: none;
+	}
+}
+
+@media screen and (max-width: 900px) {
+	.container > div {
+		margin-bottom: 30px;
+	}
+}
