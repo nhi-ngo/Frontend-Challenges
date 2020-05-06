@@ -30,10 +30,6 @@ body {
 	overflow: hidden;
 }
 
-body * {
-	z-index: 1;
-}
-
 body:after {
 	content: '';
 	background-image: url(./images/bg-top.svg);
@@ -44,7 +40,7 @@ body:after {
 	right: 0;
 	height: 100%;
 	width: 100%;
-	z-index: 0;
+	z-index: -1;
 }
 
 body::before {
@@ -57,7 +53,7 @@ body::before {
 	left: 0;
 	height: 100%;
 	width: 100%;
-	z-index: 0;
+	z-index: -1;
 }
 
 header {
