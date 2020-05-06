@@ -9,18 +9,19 @@
 		<title>Frontend Mentor | [Challenge Name Here]</title>
 	</head>
 	<body>
-
 		<header>
 			<h1>Our Pricing</h1>
 			<div class="flex">
 				<p>Annually</p>
-				<span><i class="fas fa-toggle-on fa-2.5x"></i></span>
+				<div>
+					<input type="checkbox" id="switch" />
+					<label for="switch">Toggle</label>
+				</div>
 				<p>Monthly</p>
 			</div>
 		</header>
 
 		<div class="container flex">
-
 			<div class="card">
 				<h4>Basic</h4>
 				<p class="price price-monthly">&dollar;19.99</p>
@@ -31,7 +32,7 @@
 					<li>Send up to 3 GB</li>
 				</ul>
 				<button>Learn More</button>
-      </div>
+			</div>
 
 			<div class="card bg-blue">
 				<h4>Professional</h4>
@@ -43,7 +44,7 @@
 					<li>Send up to 10 GB</li>
 				</ul>
 				<button>Learn More</button>
-      </div>
+			</div>
 
 			<div class="card">
 				<h4>Master</h4>
@@ -55,8 +56,8 @@
 					<li>Send up to 20 GB</li>
 				</ul>
 				<button>Learn More</button>
-      </div>
-
+			</div>
 		</div>
+		<script src="script.js"></script>
 	</body>
 </html>

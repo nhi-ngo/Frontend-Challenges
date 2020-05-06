@@ -28,8 +28,6 @@ body {
 	text-align: center;
 	height: 100vh;
 	overflow: hidden;
-	/* min-height: 100vh; */
-	/* overflow-y: hidden; */
 }
 
 body * {
@@ -66,6 +64,10 @@ header {
 	margin: 50px auto 20px;
 }
 
+header .flex > * {
+	margin: 0 20px;
+}
+
 header h1 {
 	font-size: 2.5rem;
 }
@@ -74,13 +76,37 @@ header p {
 	color: var(--lightBlue);
 }
 
-header i {
+input[type='checkbox'] {
+	visibility: hidden;
+}
+
+label {
 	background: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-	font-size: 50px;
-	padding: 0 25px;
 	cursor: pointer;
+	text-indent: -9999px;
+	width: 70px;
+	height: 40px;
+	display: block;
+	border-radius: 100px;
+	position: relative;
+	transform: translateY(-30%);
+}
+
+label:after {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	border-radius: 50%;
+	transition: 0.2s;
+}
+
+input:checked + label:after {
+	left: calc(100% - 5px);
+	transform: translateX(-100%);
 }
 
 .container {
@@ -98,7 +124,15 @@ header i {
 }
 
 .price-monthly {
-	display: none;
+  display: none;
+}
+
+.price-annually.close {
+  display: none;
+}
+
+.price-monthly.open {
+  display: block;
 }
 
 .card {
@@ -150,7 +184,7 @@ header i {
 
 .card.bg-blue button {
 	background: #fff;
-	color: hsl(236, 72%, 69%);
+	color: hsl(236, 72%, 70%);
 }
 
 button {
