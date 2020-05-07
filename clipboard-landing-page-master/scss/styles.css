@@ -105,15 +105,15 @@ button.cyan,
   button.cyan,
   .button.cyan {
     margin-bottom: 0;
-    margin-right: 15px;
+    margin-right: 10px;
   }
 }
 
 button.cyan:hover,
 .button.cyan:hover {
   background-color: #2acfb7;
-  -webkit-box-shadow: 0px 5px 20px #2acfb7;
-          box-shadow: 0px 5px 20px #2acfb7;
+  -webkit-box-shadow: 0px 0px 15px #2acfb7;
+          box-shadow: 0px 0px 15px #2acfb7;
 }
 
 button.blue,
@@ -125,8 +125,33 @@ button.blue,
 button.blue:hover,
 .button.blue:hover {
   background-color: #7a8aff;
-  -webkit-box-shadow: 0px 5px 20px #7a8aff;
-          box-shadow: 0px 5px 20px #7a8aff;
+  -webkit-box-shadow: 0px 0px 15px #7a8aff;
+          box-shadow: 0px 0px 15px #7a8aff;
+}
+
+@media screen and (max-width: 699px) {
+  .access img {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .access img {
+    max-width: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .supercharge,
+  .logos {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+}
+
+.app-store.wrapper {
+  padding-top: 50px;
+  padding-bottom: 150px;
 }
 
 .wrapper {
@@ -169,6 +194,10 @@ button.blue:hover,
   margin-bottom: 35px;
 }
 
+.snippets {
+  overflow: hidden;
+}
+
 @media screen and (max-width: 699px) {
   .snippets img {
     width: 100%;
@@ -184,14 +213,143 @@ button.blue:hover,
         -ms-flex-align: center;
             align-items: center;
   }
-  .snippets__flex--left {
-    margin-left: -50px;
-    margin-right: 100px;
-  }
   .snippets__flex--right {
     text-align: left;
     width: 350px;
-    margin-right: 300px;
+    margin-right: 200px;
+    margin-left: 80px;
   }
+}
+
+.supercharge {
+  padding-top: 80px;
+}
+
+@media screen and (min-width: 700px) {
+  .supercharge__flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .supercharge__flex > div {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 700px) and (min-width: 1000px) {
+  .supercharge__flex > div {
+    margin-left: 0px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .supercharge__flex h3.margin-top {
+    margin-top: 25px;
+  }
+}
+
+.logos {
+  padding-top: 80px;
+  padding-bottom: 40px;
+}
+
+.logos > img {
+  width: 100px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 700px) {
+  .logos {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.footer {
+  background-color: #f4f4f6;
+  padding-top: 30px;
+  font-size: 0.875rem;
+}
+
+@media screen and (max-width: 699px) {
+  .footer {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .footer__flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+  }
+  .footer__flex__item__wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    text-align: left;
+  }
+  .footer__flex__item__wrapper > div {
+    width: 130px;
+  }
+}
+
+.footer__flex__list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.footer__flex__item {
+  margin-bottom: 20px;
+}
+
+.footer__flex__link {
+  text-decoration: none;
+  color: #4c545d;
+}
+
+@media screen and (min-width: 1000px) {
+  .footer__flex {
+    width: 1300px;
+    max-width: 100%;
+  }
+}
+
+.footer .icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style-type: none;
+  padding-left: 0;
+  padding-top: 20px;
+}
+
+@media screen and (min-width: 700px) {
+  .footer .icons {
+    padding-top: 0;
+  }
+}
+
+.footer .icons > li {
+  margin-left: 30px;
+}
+
+.footer .icons > li:first-child {
+  margin-left: 0;
 }
 /*# sourceMappingURL=styles.css.map */

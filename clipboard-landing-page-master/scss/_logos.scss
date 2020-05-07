@@ -1,0 +1,14 @@
+.logos {
+	padding-top: 80px;
+	padding-bottom: 40px;
+
+	& > img {
+		width: 100px;
+		margin-bottom: 50px;
+	}
+
+	@include breakpoint(medium) {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}

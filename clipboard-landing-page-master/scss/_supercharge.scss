@@ -1,0 +1,23 @@
+.supercharge {
+	padding-top: 80px;
+
+	@include breakpoint(medium) {
+		&__flex {
+      display: flex;
+
+			& > div {
+				flex: 1;
+        margin-left: 20px;
+
+        @include breakpoint(large){
+          margin-left: 0px;
+        }
+			}
+
+			& h3.margin-top {
+				margin-top: 25px;
+			}
+		}
+  }
+
+}

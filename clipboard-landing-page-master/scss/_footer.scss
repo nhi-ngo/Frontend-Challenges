@@ -1,0 +1,65 @@
+.footer {
+	background-color: hsl(255, 12%, 96%);
+	padding-top: 30px;
+	font-size: 0.875rem;
+
+	@include breakpoint-less(small) {
+		padding-bottom: 20px;
+	}
+
+	&__flex {
+		@include breakpoint(medium) {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+
+			&__item__wrapper {
+				display: flex;
+				text-align: left;
+
+				& > div {
+					width: 130px;
+				}
+			}
+		}
+
+		&__list {
+			list-style-type: none;
+			padding-left: 0;
+		}
+
+		&__item {
+			margin-bottom: 20px;
+		}
+
+		&__link {
+			text-decoration: none;
+			color: $darkBlue;
+		}
+
+		@include breakpoint(large) {
+			width: 1300px;
+			max-width: 100%;
+		}
+	}
+}
+
+.footer .icons {
+	display: flex;
+	list-style-type: none;
+	padding-left: 0;
+	padding-top: 20px;
+
+	@include breakpoint(medium) {
+    padding-top: 0;
+	}
+
+	& > li {
+		margin-left: 30px;
+
+		&:first-child {
+			margin-left: 0;
+		}
+	}
+}

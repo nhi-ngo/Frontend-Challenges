@@ -1,4 +1,6 @@
 .snippets {
+  overflow: hidden;
+
 	& img {
 		@include breakpoint-less(small) {
 			width: 100%;
@@ -10,15 +12,11 @@
 			display: flex;
 			align-items: center;
 
-			&--left {
-				margin-left: -50px;
-				margin-right: 100px;
-			}
-
 			&--right {
 				text-align: left;
 				width: 350px;
-				margin-right: 300px;
+				margin-right: 200px;
+				margin-left: 80px;
 			}
 		}
 	}
