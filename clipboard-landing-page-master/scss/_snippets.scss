@@ -1,0 +1,25 @@
+.snippets {
+	& img {
+		@include breakpoint-less(small) {
+			width: 100%;
+		}
+	}
+
+	@include breakpoint(large) {
+		&__flex {
+			display: flex;
+			align-items: center;
+
+			&--left {
+				margin-left: -50px;
+				margin-right: 100px;
+			}
+
+			&--right {
+				text-align: left;
+				width: 350px;
+				margin-right: 300px;
+			}
+		}
+	}
+}

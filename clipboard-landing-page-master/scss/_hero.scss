@@ -2,14 +2,13 @@
 	background-image: url(../images/bg-header-mobile.png);
 	background-size: cover;
 	background-position: center top;
-	padding-top: 100px;
+	// padding-top: 80px;
 
 	@include breakpoint(medium) {
 		background-image: url(../images/bg-header-desktop.png);
 	}
 
 	&__subheadline {
-    margin-bottom: 40px;
-    line-height: 1.6;
+    margin-bottom: 35px;
 	}
 }
