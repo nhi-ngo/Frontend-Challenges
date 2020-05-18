@@ -1,28 +1,28 @@
 .nav {
-	position: relative;
+	// position: relative;
 
 	&__list {
 		list-style-type: none;
 		outline: none;
 
 		@include breakpoint-less(small) {
-			display: none;
+			display: flex;
+			flex-direction: column;
+			position: fixed;
+			padding-top: 30px;
+			padding-left: 0;
+			top: 100px;
+			left: 30px;
+			width: calc(100% - 60px);
+			background-color: #fff;
+			border: 1px solid rgba(0, 0, 0, 0.1);
+			border-radius: 5px;
+			box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.15);
+      transform: translateX(120%);
+      transition: transform 0.4s ease;
 
 			&.show {
-				position: fixed;
-				display: flex;
-				flex-direction: column;
-				padding-top: 30px;
-				padding-left: 0;
-				top: 110px;
-				right: 30px;
-				left: 30px;
-				width: auto;
-				height: auto;
-				background-color: #fff;
-				border: 1px solid rgba(0, 0, 0, 0.1);
-				border-radius: 5px;
-				box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.15);
+				transform: translateX(0);
 			}
 		}
 	}
@@ -36,9 +36,9 @@
 
 			&.login {
 				border-top: 1px solid rgba(0, 0, 0, 0.1);
-        padding-top: 25px;
-        width: 90%;
-        text-align: center;
+				padding-top: 25px;
+				width: 90%;
+				text-align: center;
 			}
 		}
 	}
@@ -74,7 +74,7 @@
 		border: 0;
 		cursor: pointer;
 		background-color: transparent;
-		display: flex;
+		display: block;
 
 		.close {
 			display: none;
