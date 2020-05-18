@@ -12,7 +12,8 @@ html {
 }
 
 body {
-	font-family: $font__primary;
+  font-family: $font__primary;
+  font-size: 18px;
 	margin: 0;
 	padding: 0;
 	position: relative;
@@ -22,11 +23,11 @@ body {
 		position: absolute;
 		top: 0;
 		right: 0;
-		height: 50%;
+		height: 70%;
 		width: 50%;
 		background-color: $lightBlue;
-    z-index: -1;
-    border-radius: 0 0 25% 25%;
+		z-index: -1;
+		border-radius: 0 0 25% 25%;
 	}
 }
 
@@ -39,6 +40,10 @@ body > * {
 	max-width: 100%;
 	padding: 60px;
 	margin: 0 auto;
+
+	@include breakpoint-less(small) {
+		padding: 50px 30px;
+	}
 }
 
 img {

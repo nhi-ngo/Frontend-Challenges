@@ -4,7 +4,7 @@ $font__secondary: 'Barlow Condensed', sans-serif;
 
 
 // Colors
-$red: hsl(0, 100%, 68%);
+$red: hsl(0, 100%, 77%);
 $darkBlue: hsl(230, 29%, 20%);
 $darkGrayBlue:hsl(230, 11%, 40%);
 $grayBlue: hsl(231, 7%, 65%);
@@ -13,9 +13,8 @@ $lightBlue: hsl(207, 33%, 95%);
 // Media Queries
 $breakpoints: (
 	small: 570px,
-	medium: 700px,
-	large: 1000px,
-	xlarge: 1300px,
+	medium: 571px,
+	large: 900px,
 );
 
 @mixin breakpoint($size) {

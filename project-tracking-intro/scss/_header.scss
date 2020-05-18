@@ -12,11 +12,11 @@
 				position: fixed;
 				display: flex;
 				flex-direction: column;
-        padding-top: 30px;
-        padding-left: 0;
-        top: 110px;
-				right: 60px;
-				left: 60px;
+				padding-top: 30px;
+				padding-left: 0;
+				top: 110px;
+				right: 30px;
+				left: 30px;
 				width: auto;
 				height: auto;
 				background-color: #fff;
@@ -35,8 +35,10 @@
 			margin-left: 0;
 
 			&.login {
-        border-top: 1px solid $grayBlue;
+				border-top: 1px solid rgba(0, 0, 0, 0.1);
         padding-top: 25px;
+        width: 90%;
+        text-align: center;
 			}
 		}
 	}
@@ -46,16 +48,16 @@
 		font-weight: 700;
 		text-transform: uppercase;
 		text-decoration: none;
-    letter-spacing: 1.1px;
+		letter-spacing: 1.1px;
 		color: $darkBlue;
 
 		&:hover {
 			text-decoration: underline;
-    }
+		}
 
-    @include breakpoint-less(small) {
+		@include breakpoint-less(small) {
 			&.login {
-        color: $grayBlue;
+				color: $grayBlue;
 			}
 		}
 	}
