@@ -1,0 +1,89 @@
+.nav {
+	position: relative;
+
+	&__list {
+		list-style-type: none;
+		outline: none;
+
+		@include breakpoint-less(small) {
+			display: none;
+
+			&.show {
+				position: fixed;
+				display: flex;
+				flex-direction: column;
+        padding-top: 30px;
+        padding-left: 0;
+        top: 110px;
+				right: 60px;
+				left: 60px;
+				width: auto;
+				height: auto;
+				background-color: #fff;
+				border: 1px solid rgba(0, 0, 0, 0.1);
+				border-radius: 5px;
+				box-shadow: 0 5px 15px 5px rgba(0, 0, 0, 0.15);
+			}
+		}
+	}
+
+	&__item {
+		margin-left: 45px;
+
+		@include breakpoint-less(small) {
+			margin-bottom: 30px;
+			margin-left: 0;
+
+			&.login {
+        border-top: 1px solid $grayBlue;
+        padding-top: 25px;
+			}
+		}
+	}
+
+	&__link {
+		font-family: $font__secondary;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-decoration: none;
+    letter-spacing: 1.1px;
+		color: $darkBlue;
+
+		&:hover {
+			text-decoration: underline;
+    }
+
+    @include breakpoint-less(small) {
+			&.login {
+        color: $grayBlue;
+			}
+		}
+	}
+}
+
+.hamburger {
+	display: none;
+
+	&:focus {
+		outline: none;
+	}
+
+	@include breakpoint-less(small) {
+		border: 0;
+		cursor: pointer;
+		background-color: transparent;
+		display: flex;
+
+		.close {
+			display: none;
+		}
+
+		&.show .open {
+			display: none;
+		}
+
+		&.show .close {
+			display: block;
+		}
+	}
+}

@@ -1,39 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+		<link rel="stylesheet" href="./scss/styles.css" />
+		<title>Frontend Mentor | Project tracking intro component</title>
+	</head>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Project tracking intro component</title>
+	<body>
+		<header>
+			<div class="container">
+				<nav class="nav flex">
+					<img class="logo" src="./images/logo.svg" alt="logo" />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-  Product
-  Features
-  Pricing
-  Login
+					<button id="hamburger" class="hamburger">
+						<img class="open" src="./images/icon-hamburger.svg" alt="icon-open" />
+						<img class="close" src="./images/icon-close.svg" alt="icon-close" />
+					</button>
 
-  New
-  Monograph Dashboard
+						<ul class="nav__list flex" id="menu">
+							<li class="nav__item"><a class="nav__link" href="#">Product</a></li>
+							<li class="nav__item"><a class="nav__link" href="#">Features</a></li>
+							<li class="nav__item"><a class="nav__link" href="#"> Pricing</a></li>
+							<li class="nav__item login"><a class="nav__link login" href="#">Login</a></li>
+						</ul>
+				</nav>
+			</div>
+		</header>
 
-  Powerful insights into your team
-  Project planning and time tracking for agile teams
+		<section class="hero">
+			<div class="container">
+				<div class="hero__info">
+					<div class="hero__subheading">
+						<h3>New</h3>
+						<h3>Monograph dashboard</h3>
+					</div>
 
-  Schedule a demo
-  to see a live preview
-  
-  <footer>
-    <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
-    </p>
-  </footer>
-</body>
+					<h1 class="hero__heading">
+						Powerful insights
+						<br />
+						into your team
+					</h1>
+					<p class="hero__desc">Project planning and time tracking for agile teams</p>
+
+					<div class="hero__subheading">
+						<button class="btn">Schedule a demo</button>
+						<h3>to see a live preview</h3>
+					</div>
+				</div>
+
+				<div class="hero__img">
+					<img src="./images/illustration-devices.svg" alt="illustration-devices" />
+				</div>
+			</div>
+		</section>
+
+		<script src="script.js"></script>
+	</body>
 </html>
