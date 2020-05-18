@@ -4,4 +4,4 @@
 
 ## LIVE LINK
 
-**https://nhingo.com/Frontend-Challenges/project-tracking-intro/**
+**https://nhingo.com/Frontend-Challenges/project-tracking-intro/index.html**

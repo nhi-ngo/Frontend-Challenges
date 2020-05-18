@@ -30,6 +30,9 @@ const projects = [
   {
     name: 'clipboard-landing-page',
   },
+  {
+    name: 'project-tracking-intro',
+  },
 ];
 
 const list = document.getElementById('list');
