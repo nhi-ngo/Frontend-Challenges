@@ -33,6 +33,9 @@ const projects = [
   {
     name: 'project-tracking-intro',
   },
+  {
+    name: 'social-media-dashboard',
+  },
 ];
 
 const list = document.getElementById('list');
