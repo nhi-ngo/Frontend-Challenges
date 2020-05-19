@@ -1,0 +1,27 @@
+#overview {
+	h2 {
+		color: $light-text;
+	}
+
+	.card {
+		padding: 20px;
+
+		&.flex > div:first-child {
+			text-align: left;
+		}
+
+		&.flex > div:last-child {
+			text-align: right;
+
+			p {
+				margin-top: 40px;
+			}
+		}
+
+		.numbers-med {
+			font-size: 2.8rem;
+			font-weight: 700;
+      line-height: 0;
+		}
+	}
+}

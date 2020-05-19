@@ -1,0 +1,52 @@
+// Fonts
+$font__family: 'Inter', sans-serif;
+
+// Colors
+$green: hsl(163, 72%, 41%);
+$red: hsl(356, 69%, 56%);
+$facebook: hsl(208, 92%, 53%);
+$twitter: hsl(203, 89%, 53%);
+$youtube: hsl(348, 97%, 39%);
+$dark-blue: hsl(230, 17%, 14%);
+
+// Gradient lists
+$instagram: hsl(37, 97%, 70%), hsl(329, 70%, 58%);
+$toggleBtn: hsl(210, 78%, 56%), hsl(146, 68%, 55%);
+
+@mixin gradient($direction, $list) {
+	background: -webkit-linear-gradient($direction, $list);
+	background: -moz-linear-gradient($direction, $list);
+	background: -o-linear-gradient($direction, $list);
+	background: linear-gradient($direction, $list);
+}
+
+// Light Theme
+$light-bg-pattern: hsl(225, 100%, 98%);
+$light-bg-card: hsl(227, 47%, 96%);
+$light-text: hsl(228, 12%, 44%);
+
+// Dark Theme
+$dark-bg-card: hsl(228, 28%, 20%);
+$dak-text: hsl(228, 34%, 66%);
+
+// Media Queries
+$breakpoints: (
+  small: 665px,
+  medium: 666px,
+);
+
+@mixin breakpoint($size) {
+	$breakpoint-value: map-get($breakpoints, $size);
+
+	@media screen and (min-width: $breakpoint-value) {
+		@content;
+	}
+}
+
+@mixin breakpoint-less($size) {
+	$breakpoint-value: map-get($breakpoints, $size);
+
+	@media screen and (max-width: $breakpoint-value) {
+		@content;
+	}
+}

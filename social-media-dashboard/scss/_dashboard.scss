@@ -1,0 +1,69 @@
+
+.card .flex {
+	justify-content: center;
+
+	img {
+		margin-right: 7px;
+	}
+}
+
+.card {
+	text-align: center;
+  background-color: $light-bg-card;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 20px;
+	border-radius: 5px;
+	padding: 20px 40px;
+	width: 280px;
+	position: relative;
+  overflow: hidden;
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 4px;
+		width: 100%;
+	}
+
+	&.card-fb::before {
+		background-color: $facebook;
+	}
+
+	&.card-twitter::before {
+		background-color: $twitter;
+	}
+
+	&.card-instagram::before {
+		@include gradient(to right, $instagram);
+	}
+
+	&.card-youtube::before {
+		background-color: $youtube;
+	}
+}
+
+.numbers {
+	font-size: 4.5rem;
+	font-weight: 700;
+	margin-bottom: 0;
+	margin-top: 10px;
+
+	@include breakpoint-less(small) {
+		font-size: 3.5rem;
+	}
+}
+
+.followers {
+	font-size: 1.1rem;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+	color: gray;
+	margin-top: 0;
+
+	@include breakpoint-less(small) {
+		font-size: 0.8rem;
+	}
+}

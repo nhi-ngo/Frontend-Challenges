@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: $font__family;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	width: 1300px;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 25px 40px;
+}
+
+// Helper classes
+.flex {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	flex-wrap: wrap;
+}
+
+#overview .flex > div,
+#dashboard .flex > div {
+  flex: 1 0 auto;
+}
+
+.types {
+	color: $light-text;
+	font-weight: 700;
+
+	@include breakpoint-less(small) {
+		font-size: 0.8rem;
+	}
+}
+
+.green {
+	color: $green;
+}
+
+.red {
+	color: $red;
+}
+
