@@ -15,6 +15,7 @@ body {
   font-family: "Inter", sans-serif;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .container {
@@ -41,8 +42,8 @@ body {
 #overview .flex > div,
 #dashboard .flex > div {
   -webkit-box-flex: 1;
-      -ms-flex: 1 0 auto;
-          flex: 1 0 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
 }
 
 .types {
@@ -57,11 +58,35 @@ body {
 }
 
 .green {
-  color: #1db489;
+  color: #1db489 !important;
 }
 
 .red {
-  color: #dc414c;
+  color: #dc414c !important;
+}
+
+.show-dark {
+  color: #fff;
+  background-color: #1e202a;
+}
+
+.show-dark .container,
+.show-dark header:after {
+  background-color: #1e202a;
+}
+
+.show-dark .card,
+.show-dark .toggle label:after {
+  background-color: #252a41;
+}
+
+.show-dark .types,
+.show-dark .followers {
+  color: #8b97c6;
+}
+
+.show-dark #overview h2 {
+  color: #fff;
 }
 
 header h1 {
@@ -144,14 +169,19 @@ header::after {
 .card {
   text-align: center;
   background-color: #f0f2fa;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 20px;
   margin-bottom: 20px;
   border-radius: 5px;
   padding: 20px 40px;
   width: 280px;
   position: relative;
   overflow: hidden;
+}
+
+@media screen and (max-width: 665px) {
+  .card {
+    margin-right: 0;
+  }
 }
 
 .card::before {
@@ -209,6 +239,7 @@ header::after {
 
 #overview h2 {
   color: #63687e;
+  margin-top: 0;
 }
 
 #overview .card {

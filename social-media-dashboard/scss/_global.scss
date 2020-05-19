@@ -14,6 +14,7 @@ body {
 	font-family: $font__family;
 	margin: 0;
 	padding: 0;
+	position: relative;
 }
 
 .container {
@@ -33,7 +34,7 @@ body {
 
 #overview .flex > div,
 #dashboard .flex > div {
-  flex: 1 0 auto;
+	flex: 1 1 auto;
 }
 
 .types {
@@ -46,10 +47,34 @@ body {
 }
 
 .green {
-	color: $green;
+	color: $green !important;
 }
 
 .red {
-	color: $red;
+	color: $red !important;
 }
 
+// Show-dark theme
+.show-dark {
+	color: #fff;
+	background-color: $dark-blue;
+
+	.container,
+	header:after {
+		background-color: $dark-blue;
+	}
+
+	.card,
+	.toggle label:after {
+		background-color: $dark-bg-card;
+	}
+
+	.types,
+	.followers {
+		color: $dark-text;
+	}
+
+	#overview h2 {
+		color: #fff;
+	}
+}

@@ -10,14 +10,17 @@
 .card {
 	text-align: center;
   background-color: $light-bg-card;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-right: 20px;
   margin-bottom: 20px;
 	border-radius: 5px;
 	padding: 20px 40px;
 	width: 280px;
 	position: relative;
   overflow: hidden;
+
+  @include breakpoint-less(small) {
+		margin-right: 0;
+  }
 
 	&::before {
 		content: '';
