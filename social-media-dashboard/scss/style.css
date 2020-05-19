@@ -169,19 +169,14 @@ header::after {
 .card {
   text-align: center;
   background-color: #f0f2fa;
-  margin-right: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
   margin-bottom: 20px;
   border-radius: 5px;
   padding: 20px 40px;
   width: 280px;
   position: relative;
   overflow: hidden;
-}
-
-@media screen and (max-width: 665px) {
-  .card {
-    margin-right: 0;
-  }
 }
 
 .card::before {
