@@ -17,7 +17,7 @@ const JobBoard = props => {
     tools,
   } = props.job;
   return (
-    <div className="flex bg-white shadow-lg m-5 p-6 border-2 rounded-md">
+    <div className="flex bg-white shadow-lg m-5 p-5 border-2 rounded-md">
       <div>
         <img src={logo} alt={company} />
       </div>
