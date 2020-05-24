@@ -16,8 +16,19 @@ const JobBoard = props => {
     languages,
     tools,
   } = props.job;
+
+  const langAndTools = [];
+
+  if (languages) {
+    langAndTools.push(...languages);
+  }
+
+  if (tools) {
+    langAndTools.push(...tools);
+  }
+
   return (
-    <div className="flex bg-white shadow-lg m-5 p-5 border-2 rounded-md">
+    <div className="flex bg-white shadow-lg m-5 p-6 rounded-md border-2 border-transparent">
       <div>
         <img src={logo} alt={company} />
       </div>
@@ -29,7 +40,12 @@ const JobBoard = props => {
           {postedAt} · {contract} · {location}
         </p>
       </div>
-      <div>{languages}</div>
+
+      <div className="flex items-center ml-auto">
+        {langAndTools
+          ? langAndTools.map(langAndTool => <span className="font-bold m-2 p-1 rounded">{langAndTool}</span>)
+          : ''}
+      </div>
     </div>
   );
 };
