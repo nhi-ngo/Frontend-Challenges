@@ -16,10 +16,11 @@ body {
 	margin: 0 auto;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* Search Bar */
+.search-bar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 }
 
 h2 {
@@ -33,12 +34,44 @@ h2::after {
 	background: linear-gradient(to left, #f7930a, #f3d593);
 }
 
-input {
-  border-radius: 5px;
-  border: none;
-
+.search-form {
+  display: flex;
+  align-items: center;
 }
 
+.search-form:hover .search-term {
+  width: 200px;
+}
+
+.search-term {
+	color: #4e38a5;
+	font-size: 14px;
+  border: none;
+  padding: 0;
+	border-bottom: 1px solid #4e38a5;
+  background: transparent;
+  width: 0;
+  transition: width 0.5s ease;
+}
+
+.search-term:focus {
+  outline: none;
+}
+
+.search-term::placeholder {
+	font-family: 'Comfortaa', cursive;
+}
+
+.search-button {
+	color: #4e38a5;
+	border: transparent;
+	outline: none;
+	background: none;
+	cursor: pointer;
+	font-size: 20px;
+}
+
+/* RandomMeals */
 .meal {
 	display: flex;
 	background-color: #fff;
@@ -98,7 +131,6 @@ input {
 	outline: none;
 	text-decoration: none;
 	position: absolute;
-	z-index: 999;
 	right: -20px;
 	bottom: -20px;
 	background: linear-gradient(to left, #f7930a, #f3d593);

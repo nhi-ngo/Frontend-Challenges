@@ -19,10 +19,6 @@ const RandomMeals = () => {
 
   return (
     <section className="container">
-      <div className="header">
-        <h2>Featured Meal</h2>
-        <input className="search" type="text" placeholder="Search..."/>
-      </div>
       <div className="meal">
         <div className="meal-img">
           <img src={strMealThumb} alt={strMeal} />
