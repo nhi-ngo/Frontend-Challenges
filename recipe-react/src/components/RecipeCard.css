@@ -71,12 +71,13 @@ h2::after {
 	font-size: 20px;
 }
 
-/* RandomMeals */
+/* RecipeCard */
 .meal {
 	display: flex;
 	background-color: #fff;
 	border-radius: 5px;
-	box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
 }
 
 .meal-img {
