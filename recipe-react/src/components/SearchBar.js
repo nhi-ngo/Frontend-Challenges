@@ -1,17 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const SearchBar = () => {
-  const [searchTerm, setSearchTerm] = useState('');
+const SearchBar = props => {
 
   const onFormSubmit = e => {
     e.preventDefault();
 
     // TODO: call callback passed down from parent
-  };
-
-  const updateSearchTerm = e => {
-    setSearchTerm(e.target.value);
-    console.log(searchTerm);
+    props.onFormSubmit(props.value);
   };
 
   return (
@@ -19,14 +14,14 @@ const SearchBar = () => {
       <h2>Featured Meals</h2>
       <form onSubmit={onFormSubmit} className="search-form">
         <input
-          value={searchTerm}
-          onChange={updateSearchTerm}
+          value={props.value}
+          onChange={(e)=> props.onInputChange(e)}
           className="search-term"
           type="text"
           placeholder="Search..."
           autoComplete="off"
         />
-        <button type="submit" className="search-button">
+        <button className="search-button">
           <i className="fa fa-search"></i>
         </button>
       </form>
