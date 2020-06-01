@@ -36,6 +36,12 @@ const projects = [
   {
     name: 'social-media-dashboard',
   },
+  {
+    name: 'job-listings-react',
+  },
+  {
+    name: 'recipe-react',
+  },
 ];
 
 const list = document.getElementById('list');

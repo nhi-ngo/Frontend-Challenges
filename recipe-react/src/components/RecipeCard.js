@@ -12,7 +12,12 @@ const RecipeCard = ({ recipe }) => {
         </div>
         <div className="meal-details">
           <h1 className="meal-title">{label}</h1>
-          <p className="meal-instruction">{`${ingredientLines}.substring(0,150)...`}</p>
+          {/* <p className="meal-instruction">{`${ingredientLines}.substring(0,150)...`}</p> */}
+          <ol className="meal-instruction">
+            {ingredientLines.map(ingredient =>
+              <li key={ingredient}>{ingredient}</li>
+            )}
+          </ol>
           <ul className="meal-info">
             <li>
               Diet: <span>{healthLabels[0]}</span>

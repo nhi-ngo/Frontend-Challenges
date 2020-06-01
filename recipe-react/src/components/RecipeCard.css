@@ -73,7 +73,7 @@ h2::after {
 
 /* RecipeCard */
 .meal {
-	display: flex;
+  display: flex;
 	background-color: #fff;
 	border-radius: 5px;
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.2);
@@ -103,6 +103,14 @@ h2::after {
 	margin: 0 0 20px 0;
 	font-size: 24px;
 	font-weight: 500;
+}
+
+.meal-instruction {
+  padding-left: 15px;
+}
+
+.meal-instruction li {
+  padding-left: 10px;
 }
 
 .meal-info {
