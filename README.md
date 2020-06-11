@@ -4,4 +4,4 @@
 
 ## LIVE LINK
 
-**https://nhingo.com/Frontend-Challenges**
+**https://www.nhingo.com/Frontend-Challenges/**
