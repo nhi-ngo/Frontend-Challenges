@@ -4,4 +4,4 @@
 
 ## LIVE LINK
 
-**https://nhingo.com/Frontend-Challenges/huddle-landing-page/**
+**https://www.nhingo.com/Frontend-Challenges/huddle-landing-page/index.html**

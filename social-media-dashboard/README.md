@@ -4,4 +4,4 @@
 
 ## LIVE LINK
 
-**https://nhingo.com/Frontend-Challenges/social-media-dashboard/**
+**https://www.nhingo.com/Frontend-Challenges/social-media-dashboard/index.html**

@@ -4,5 +4,5 @@
 
 ## LIVE LINK
 
-**https://nhingo.com/Frontend-Challenges/four-card-feature/**
+**https://www.nhingo.com/Frontend-Challenges/four-card-feature/index.html**
 

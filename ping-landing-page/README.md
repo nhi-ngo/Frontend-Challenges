@@ -4,4 +4,4 @@
 
 ## LIVE LINK
 
-**https://nhingo.com/Frontend-Challenges/ping-landing-page/**
+**https://www.nhingo.com/Frontend-Challenges/ping-landing-page/index.html**

@@ -4,4 +4,4 @@
 
 ## LIVE LINK
 
-**https://nhingo.com/Frontend-Challenges/price-grid/**
+**https://www.nhingo.com/Frontend-Challenges/price-grid/index.html**

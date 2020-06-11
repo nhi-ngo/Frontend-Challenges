@@ -4,4 +4,4 @@
 
 ## LIVE LINK
 
-**https://nhingo.com/Frontend-Challenges/pricing-toggle/**
+**https://www.nhingo.com/Frontend-Challenges/pricing-toggle/index.html**

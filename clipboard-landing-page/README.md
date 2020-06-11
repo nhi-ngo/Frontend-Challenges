@@ -4,4 +4,4 @@
 
 ## LIVE LINK
 
-**https://nhingo.com/Frontend-Challenges/clipboard-landing-page/**
+**https://www.nhingo.com/Frontend-Challenges/clipboard-landing-page/index.html**

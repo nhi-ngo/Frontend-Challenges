@@ -4,4 +4,4 @@
 
 ## LIVE LINK
 
-**https://nhingo.com/Frontend-Challenges/insure-landing-page/**
+**https://www.nhingo.com/Frontend-Challenges/insure-landing-page/index.html**
