@@ -1,0 +1,29 @@
+section#blog {
+	background-color: $lightGray;
+
+	.container {
+		flex-direction: column;
+
+		.card {
+      flex: 1;
+      background-color: $white;
+      margin-bottom: 30px;
+      border-radius: 5px;
+
+      &_image {
+        border-radius: 5px 5px 0 0;
+        overflow: hidden;
+      }
+
+
+      &_info {
+        text-align: left;
+        padding: 30px;
+
+        small {
+          color: rgba(0, 0, 0, 0.35);
+        }
+      }
+		}
+	}
+}

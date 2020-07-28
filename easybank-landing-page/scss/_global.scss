@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap');
+
+html {
+	box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+body {
+  font-family: $font;
+  background-color: $lightBlue;
+  margin: 0;
+  padding: 0;
+}
+
+.overlay {
+	background-color: transparent;
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	top: 0;
+  left: 0;
+
+	&.show {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+}
+
+.container {
+	margin: 0 auto;
+	padding: 40px 20px 70px;
+	// width: 375px;
+  width: 1200px;
+	max-width: 100%;
+	text-align: center;
+
+	@include breakpoint(medium) {
+	}
+}
+
+.mobile-reverse {
+	display: flex;
+	flex-direction: column-reverse;
+}
+
+.flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#home, #blog{
+  background-color: #fff;
+}
+
+img {
+	max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+	color: $blue;
+}
+
+h1 {
+	font-size: 2em;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: 1.6em;
+	font-weight: 300;
+}
+
+h3 {
+	font-size: 1.1em;
+	font-weight: 300;
+}
+
+p {
+  color: rgba(0, 0, 0, 0.35);
+  line-height: 1.5;
+}
+
+button.invite {
+  font-size: inherit;
+	font-family: inherit;
+	font-weight: bold;
+	background: linear-gradient(to left, $cyan, $lime);
+	color: $lightGray;
+	border: 0;
+	outline: none;
+	padding: 15px 30px;
+	border-radius: 50px;
+	cursor: pointer;
+}

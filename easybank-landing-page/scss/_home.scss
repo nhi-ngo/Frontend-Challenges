@@ -1,0 +1,17 @@
+section#home {
+	.home__info {
+    margin-top: -150px;
+
+    p {
+      margin-bottom: 30px;
+    }
+	}
+	.home__mockups {
+		background-image: url('../images/bg-intro-mobile.svg');
+		background-repeat: no-repeat;
+		background-position: right bottom;
+		background-size: cover;
+		width: 100vw;
+		transform: translateY(-35%);
+	}
+}
