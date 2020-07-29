@@ -353,6 +353,14 @@ section#blog .card_wrapper {
           flex-direction: column;
 }
 
+@media screen and (min-width: 768px) {
+  section#blog .card_wrapper {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+
 section#blog .card_wrapper > div {
   margin-bottom: 30px;
 }
@@ -360,6 +368,12 @@ section#blog .card_wrapper > div {
 @media screen and (min-width: 768px) {
   section#blog .card_wrapper > div {
     margin-right: 30px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  section#blog .card_wrapper > div:last-child {
+    margin-right: 0;
   }
 }
 
@@ -380,6 +394,13 @@ section#blog .card_wrapper .card {
 section#blog .card_wrapper .card_image {
   border-radius: 5px 5px 0 0;
   overflow: hidden;
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  section#blog .card_wrapper .card_image {
+    height: 162px;
+  }
 }
 
 section#blog .card_wrapper .card_info {

@@ -8,11 +8,21 @@ section#blog {
 	.card_wrapper {
 		flex-direction: column;
 
+		@include breakpoint(medium) {
+			align-items: flex-start;
+		}
+
 		& > div {
 			margin-bottom: 30px;
 
 			@include breakpoint(medium) {
 				margin-right: 30px;
+			}
+
+			&:last-child {
+				@include breakpoint(medium) {
+					margin-right: 0;
+				}
 			}
 		}
 
@@ -26,9 +36,12 @@ section#blog {
 
 			&_image {
 				border-radius: 5px 5px 0 0;
-				overflow: hidden;
-				// width: 500px;
-				// height: 150px;
+        overflow: hidden;
+        width: 100%;
+
+				@include breakpoint(medium) {
+					height: 162px;
+				}
 			}
 
 			&_info {
