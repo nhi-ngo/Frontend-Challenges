@@ -1,47 +1,69 @@
 footer {
-
-  .container {
-    padding-bottom: 30px;
-  }
-
 	background-color: $blue;
 	color: darken($color: $lightGray, $amount: 20%);
+
+	.container {
+		padding-bottom: 30px;
+	}
 
 	.footer_info {
 		flex-direction: column;
 		margin-top: 35px;
 
+		@include breakpoint(medium) {
+			flex-direction: row;
+		}
+
 		& > ul {
+			flex: 1;
 			list-style-type: none;
 			margin: 0;
-			padding-left: 0;
+      padding-left: 0;
 		}
 
 		ul > li {
-			margin-bottom: 25px;
+      margin-bottom: 25px;
+      cursor: pointer;
+
+			&:hover {
+				color: $lime;
+			}
 		}
 
 		ul.social-media {
 			display: flex;
 
 			li:not(:last-of-type) {
-				margin-right: 20px;
+        margin-right: 20px;
+
+        @include breakpoint(medium) {
+          margin-right: 12px;
+        }
 			}
 		}
 	}
 }
 
 .footer_info ul:nth-child(2) {
-	margin-top: 10px;
+  margin-top: 10px;
+
+  @include breakpoint(medium) {
+    margin-top: 0;
+  }
 }
 
 .footer_info div:last-of-type {
-  display: flex;
+	display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  flex: 1.5;
+  margin-top: 20px;
 
-  p {
-    color: darken($color: $lightGray, $amount: 50%);
-    margin-top: 30px;
+  @include breakpoint(medium) {
+    align-items: flex-end;
   }
+
+	p {
+		color: darken($color: $lightGray, $amount: 50%);
+		margin-top: 30px;
+	}
 }

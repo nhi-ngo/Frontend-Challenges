@@ -1,15 +1,27 @@
 section#about {
-	background-color: $lightBlue;
+  background-color: $lightBlue;
+
+  .container {
+    padding-bottom: 28px;
+  }
 
 	ul {
-    flex-direction: column;
-    list-style-type: none;
-    padding: 0;
-    margin-top: 40px;
-    margin-bottom: 0;
+		flex-direction: column;
+		list-style-type: none;
+		padding: 0;
+		margin-top: 50px;
 
-    li {
-      margin-bottom: 20px;
-    }
+		@include breakpoint(medium) {
+			flex-direction: row;
+		}
+
+		li {
+			margin-bottom: 25px;
+
+			@include breakpoint(medium) {
+				margin-right: 20px;
+				margin-bottom: 0;
+			}
+		}
 	}
 }

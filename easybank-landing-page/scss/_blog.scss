@@ -1,29 +1,44 @@
 section#blog {
 	background-color: $lightGray;
 
-	.container {
+	h2 {
+		margin-bottom: 35px;
+	}
+
+	.card_wrapper {
 		flex-direction: column;
 
+		& > div {
+			margin-bottom: 30px;
+
+			@include breakpoint(medium) {
+				margin-right: 30px;
+			}
+		}
+
+		@include breakpoint(medium) {
+			flex-direction: row;
+		}
+
 		.card {
-      flex: 1;
-      background-color: $white;
-      margin-bottom: 30px;
-      border-radius: 5px;
+			background-color: $white;
+			border-radius: 5px;
 
-      &_image {
-        border-radius: 5px 5px 0 0;
-        overflow: hidden;
-      }
+			&_image {
+				border-radius: 5px 5px 0 0;
+				overflow: hidden;
+				// width: 500px;
+				// height: 150px;
+			}
 
+			&_info {
+				text-align: left;
+				padding: 30px;
 
-      &_info {
-        text-align: left;
-        padding: 30px;
-
-        small {
-          color: rgba(0, 0, 0, 0.35);
-        }
-      }
+				small {
+					color: rgba(0, 0, 0, 0.35);
+				}
+			}
 		}
 	}
 }

@@ -24,37 +24,39 @@ body {
 	height: 100vh;
 	top: 0;
   left: 0;
+  z-index: -1;
+
 
 	&.show {
-		background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 	}
 }
 
 .container {
 	margin: 0 auto;
 	padding: 40px 20px 70px;
-	// width: 375px;
   width: 1200px;
 	max-width: 100%;
-	text-align: center;
+  text-align: center;
 
-	@include breakpoint(medium) {
-	}
-}
-
-.mobile-reverse {
-	display: flex;
-	flex-direction: column-reverse;
+  @include breakpoint(medium) {
+    text-align: left;
+  }
 }
 
 .flex {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
 	align-items: center;
 }
 
+.flex > div {
+	flex: 1;
+}
+
 #home, #blog{
-  background-color: #fff;
+  background-color: $lightGray;
 }
 
 img {
@@ -68,7 +70,7 @@ h3 {
 }
 
 h1 {
-	font-size: 2em;
+	font-size: 2.5em;
 	font-weight: 300;
 }
 
@@ -95,7 +97,11 @@ button.invite {
 	color: $lightGray;
 	border: 0;
 	outline: none;
-	padding: 15px 30px;
+	padding: 13px 30px;
 	border-radius: 50px;
-	cursor: pointer;
+  cursor: pointer;
+
+  &:hover{
+    opacity: 0.6;
+  }
 }

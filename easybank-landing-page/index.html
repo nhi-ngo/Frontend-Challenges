@@ -11,11 +11,11 @@
 		<title>Frontend Mentor | Easybank landing page</title>
 	</head>
 	<body>
-    <div class="overlay"></div>
+		<div class="overlay"></div>
 
 		<header>
-			<div class="container">
-				<nav>
+			<nav>
+				<div class="container flex">
 					<img src="./images/logo.svg" alt="easybank-logo" />
 
 					<button id="hamburger" class="hamburger">
@@ -32,20 +32,25 @@
 					</ul>
 
 					<button class="invite">Request Invite</button>
-				</nav>
-			</div>
+				</div>
+			</nav>
 		</header>
 
 		<section id="home">
 			<div class="container flex mobile-reverse">
 				<div class="home__info">
-					<h1>Next generation digital banking</h1>
+					<h1>
+						Next generation
+						<br />
+						digital banking
+					</h1>
 					<p>
 						Take your financial life online. Your Easybank account will be a one-stop-shop for spending, saving,
 						budgeting, investing, and much more.
 					</p>
-					<button class="invite">Request Invite</button>
+					<button class="btn invite">Request Invite</button>
 				</div>
+
 				<div class="home__mockups">
 					<img src="./images/image-mockups.png" alt="mock-up" />
 				</div>
@@ -97,58 +102,60 @@
 		</section>
 
 		<section id="blog">
-			<div class="container flex">
-        <h2>Latest Articles</h2>
+			<div class="container">
+				<h2>Latest Articles</h2>
 
-				<div class="card">
-					<img class="card_image" src="./images/image-currency.jpg" alt="currency" />
-					<div class="card_info">
-						<small>By Claire Robinson</small>
-						<h3>Receive money in any currency with no fees</h3>
-						<p>
-							The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive
-							money in a single <a href="#">…</a>
-						</p>
-          </div>
-        </div>
-
-				<div class="card">
-					<img class="card_image" src="./images/image-restaurant.jpg" alt="restaurant" />
-					<div class="card_info">
-						<small>By Wilson Hutton</small>
-						<h3>Treat yourself without worrying about money</h3>
-						<p>
-							Our simple budgeting feature allows you to separate out your spending and set realistic limits each month.
-							That means you <a href="#">…</a>
-						</p>
+				<div class="card_wrapper flex">
+					<div class="card">
+						<img class="card_image" src="./images/image-currency.jpg" alt="currency" />
+						<div class="card_info">
+							<small>By Claire Robinson</small>
+							<h3>Receive money in any currency with no fees</h3>
+							<p>
+								The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive
+								money in a single <a href="#">…</a>
+							</p>
+						</div>
 					</div>
-        </div>
 
-				<div class="card">
-					<img class="card_image" src="./images/image-plane.jpg" alt="plane" />
-					<div class="card_info">
-						<small>By Wilson Hutton</small>
-						<h3>
-							Take your Easybank card wherever you go
-						</h3>
-						<p>
-							We want you to enjoy your travels. This is why we don’t charge any fees on purchases while you’re abroad.
-							We’ll even show you <a href="#">…</a>
-						</p>
+					<div class="card">
+						<img class="card_image" src="./images/image-restaurant.jpg" alt="restaurant" />
+						<div class="card_info">
+							<small>By Wilson Hutton</small>
+							<h3>Treat yourself without worrying about money</h3>
+							<p>
+								Our simple budgeting feature allows you to separate out your spending and set realistic limits each
+								month. That means you <a href="#">…</a>
+							</p>
+						</div>
 					</div>
-        </div>
 
-				<div class="card">
-					<img class="card_image" src="./images/image-confetti.jpg" alt="confetti" />
-					<div class="card_info">
-						<small>By Claire Robinson</small>
-						<h3>
-							Our invite-only Beta accounts are now live!
-						</h3>
-						<p>
-							After a lot of hard work by the whole team, we’re excited to launch our closed beta. It’s easy to request
-							an invite through the site <a href="#">…</a>
-						</p>
+					<div class="card">
+						<img class="card_image" src="./images/image-plane.jpg" alt="plane" />
+						<div class="card_info">
+							<small>By Wilson Hutton</small>
+							<h3>
+								Take your Easybank card wherever you go
+							</h3>
+							<p>
+								We want you to enjoy your travels. This is why we don’t charge any fees on purchases while you’re
+								abroad. We’ll even show you <a href="#">…</a>
+							</p>
+						</div>
+					</div>
+
+					<div class="card">
+						<img class="card_image" src="./images/image-confetti.jpg" alt="confetti" />
+						<div class="card_info">
+							<small>By Claire Robinson</small>
+							<h3>
+								Our invite-only Beta accounts are now live!
+							</h3>
+							<p>
+								After a lot of hard work by the whole team, we’re excited to launch our closed beta. It’s easy to
+								request an invite through the site <a href="#">…</a>
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -160,24 +167,35 @@
 
 				<div class="flex footer_info">
 					<ul class="social-media">
-						<li><img src="./images/icon-facebook.svg" alt="icon-facebook" /></li>
-						<li><img src="./images/icon-youtube.svg" alt="icon-youtube" /></li>
-						<li><img src="./images/icon-twitter.svg" alt="icon-twitter" /></li>
-						<li><img src="./images/icon-pinterest.svg" alt="icon-pinterest" /></li>
-						<li><img src="./images/icon-instagram.svg" alt="icon-instagram" /></li>
+						<li>
+							<img src="./images/icon-facebook.svg" alt="icon-facebook" />
+						</li>
+						<li>
+							<img src="./images/icon-youtube.svg" alt="icon-youtube" />
+						</li>
+						<li>
+							<img src="./images/icon-twitter.svg" alt="icon-twitter" />
+						</li>
+						<li>
+							<img src="./images/icon-pinterest.svg" alt="icon-pinterest" />
+						</li>
+						<li>
+							<img src="./images/icon-instagram.svg" alt="icon-instagram" />
+						</li>
 					</ul>
+
 					<ul>
 						<li>About Us</li>
 						<li>Contact</li>
-						<li>
-							Blog
-						</li>
+						<li>Blog</li>
 					</ul>
+
 					<ul>
 						<li>Careers</li>
 						<li>Support</li>
 						<li>Privacy Policy</li>
 					</ul>
+
 					<div>
 						<button class="invite">Request Invite</button>
 						<p class="trademark">© Easybank. All Rights Reserved</p>
@@ -185,6 +203,7 @@
 				</div>
 			</div>
 		</footer>
+
 		<script src="index.js"></script>
 	</body>
 </html>

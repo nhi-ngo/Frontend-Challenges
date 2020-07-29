@@ -1,18 +1,19 @@
 header {
 	nav {
-		display: flex;
-		justify-content: space-between;
+		.container {
+			padding: 25px 20px;
+
+			@include breakpoint(medium) {
+				padding: 0px 20px;
+			}
+		}
+
 		position: fixed;
 		top: 0;
 		left: 0;
 		right: 0;
 		z-index: 100;
-		padding: 25px;
 		background-color: #fff;
-
-		@include breakpoint(medium) {
-			align-items: center;
-		}
 
 		button#hamburger {
 			border: 0;
@@ -48,9 +49,9 @@ header {
 			}
 		}
 
-		ul {
+		ul#menu {
 			list-style: none;
-			display: none;
+      display: none;
 
 			@include breakpoint(medium) {
 				display: flex;
@@ -63,26 +64,41 @@ header {
 				flex-direction: column;
 				align-items: center;
 				position: fixed;
-				top: 100px;
-				left: 30px;
-				right: 30px;
+				top: 90px;
+				left: 20px;
+				right: 20px;
 				margin: 0;
 				padding: 20px 0;
-				width: calc(100vw - 60px);
-				z-index: 100;
+				width: calc(100vw - 40px);
+        z-index: 100;
 			}
 
 			li {
 				line-height: 2.5;
+				position: relative;
 
 				a {
 					text-decoration: none;
-          color: $blue;
+					color: $blue;
 
-          @include breakpoint(medium) {
-            color: rgba(0, 0, 0, 0.35);
-            margin-right: 20px;
-          }
+					@include breakpoint(medium) {
+						color: rgba(0, 0, 0, 0.35);
+						margin-right: 20px;
+
+						&:hover {
+							color: $blue;
+
+							&::after {
+								position: absolute;
+								content: '';
+								bottom: -15px;
+								left: 0;
+								background: linear-gradient(to left, $cyan, $lime);
+								width: 55px;
+								height: 4px;
+							}
+						}
+					}
 				}
 			}
 		}

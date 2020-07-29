@@ -1,10 +1,27 @@
 section#home {
-	.home__info {
-    margin-top: -150px;
+	.mobile-reverse {
+		display: flex;
+		flex-direction: column-reverse;
 
-    p {
-      margin-bottom: 30px;
-    }
+		@include breakpoint(medium) {
+			flex-direction: row;
+		}
+	}
+
+	.home__info {
+		margin-top: -35%;
+
+		@include breakpoint(medium) {
+			margin-top: 0;
+		}
+
+		p {
+			margin-bottom: 30px;
+
+			@include breakpoint(medium) {
+				width: 400px;
+			}
+		}
 	}
 	.home__mockups {
 		background-image: url('../images/bg-intro-mobile.svg');
@@ -13,5 +30,13 @@ section#home {
 		background-size: cover;
 		width: 100vw;
 		transform: translateY(-35%);
+
+		@include breakpoint(medium) {
+			transform: translateY(0);
+			background-image: url('../images/bg-intro-desktop.svg');
+			background-repeat: no-repeat;
+			background-position: center left;
+			background-size: cover;
+		}
 	}
 }
