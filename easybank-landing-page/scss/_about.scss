@@ -1,9 +1,9 @@
 section#about {
-  background-color: $lightBlue;
+	background-color: $lightBlue;
 
-  .container {
-    padding-bottom: 28px;
-  }
+	.container {
+		padding-bottom: 28px;
+	}
 
 	ul {
 		flex-direction: column;
@@ -21,6 +21,12 @@ section#about {
 			@include breakpoint(medium) {
 				margin-right: 20px;
 				margin-bottom: 0;
+			}
+		}
+
+		li:last-of-type {
+			@include breakpoint(medium) {
+        margin-right: 0;
 			}
 		}
 	}

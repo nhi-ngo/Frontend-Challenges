@@ -9,7 +9,7 @@ section#blog {
 		flex-direction: column;
 
 		@include breakpoint(medium) {
-			align-items: flex-start;
+      align-items: stretch;
 		}
 
 		& > div {
@@ -46,7 +46,7 @@ section#blog {
 
 			&_info {
 				text-align: left;
-				padding: 30px;
+        padding: 30px;
 
 				small {
 					color: rgba(0, 0, 0, 0.35);
