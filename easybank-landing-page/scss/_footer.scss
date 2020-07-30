@@ -32,19 +32,16 @@ footer {
 		}
 
 		ul.social-media {
-			display: flex;
-			flex-direction: column;
-			justify-content: space-between;
-
 			@include breakpoint(medium) {
-				flex: 0.7;
-				margin-right: 8em;
-				margin-top: 0;
-				margin-bottom: 0;
+				display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+				margin: 0 3em 0 0;
 			}
 
 			.icons-wrapper {
 				flex-direction: row;
+				justify-content: flex-start;
 				margin: 30px 0 20px 0;
 
 				& > li {
@@ -68,12 +65,12 @@ footer {
 }
 
 .footer_info div:last-of-type {
-	display: flex;
-	flex-direction: column;
-	flex: 1.5;
 	margin-top: 20px;
 
 	@include breakpoint(medium) {
+		display: flex;
+		flex-direction: column;
+		flex: 1.5;
 		align-items: flex-end;
 		justify-content: space-between;
 		margin-top: 0;

@@ -26,7 +26,7 @@ section#about {
 
 		li:last-of-type {
 			@include breakpoint(medium) {
-        margin-right: 0;
+				margin-right: 0;
 			}
 		}
 	}

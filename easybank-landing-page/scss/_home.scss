@@ -1,4 +1,9 @@
 section#home {
+	.container {
+		@include breakpoint(medium) {
+			padding-bottom: 0px;
+		}
+	}
 	.mobile-reverse {
 		display: flex;
 		flex-direction: column-reverse;
@@ -27,16 +32,19 @@ section#home {
 		background-image: url('../images/bg-intro-mobile.svg');
 		background-repeat: no-repeat;
 		background-position: right bottom;
-		background-size: cover;
 		width: 100vw;
 		transform: translateY(-35%);
 
 		@include breakpoint(medium) {
-			transform: translateY(0);
+			transform: translateX(0%);
 			background-image: url('../images/bg-intro-desktop.svg');
 			background-repeat: no-repeat;
 			background-position: center left;
-			background-size: cover;
+      background-size: 200% auto;
+
+      img {
+        transform: translateX(20%);
+      }
 		}
 	}
 }
