@@ -66,7 +66,8 @@ body {
           flex: 1;
 }
 
-#home, #blog {
+#home,
+#blog {
   background-color: #fafafa;
 }
 
@@ -104,18 +105,24 @@ button.invite {
   font-size: inherit;
   font-family: inherit;
   font-weight: bold;
-  background: -webkit-gradient(linear, right top, left top, from(#2bb7da), to(#31d35c));
-  background: linear-gradient(to left, #2bb7da, #31d35c);
+  background-image: -webkit-gradient(linear, right top, left top, from(#2bb7da), color-stop(50%, #31d35c), to(#2bb7da));
+  background-image: linear-gradient(to left, #2bb7da 0%, #31d35c 50%, #2bb7da 100%);
+  background-size: 200% auto;
+  -webkit-box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   color: #fafafa;
   border: 0;
   outline: none;
   padding: 13px 30px;
   border-radius: 50px;
   cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 button.invite:hover {
-  opacity: 0.6;
+  background-position: right center;
+  opacity: 0.9;
 }
 
 header nav {
@@ -442,9 +449,9 @@ footer .footer_info {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
   }
 }
 
@@ -463,7 +470,7 @@ footer .footer_info ul > li {
 }
 
 footer .footer_info ul > li:hover {
-  color: #31d35c;
+  color: #1bd7bb;
 }
 
 footer .footer_info ul.social-media {
@@ -496,6 +503,10 @@ footer .footer_info ul.social-media .icons-wrapper {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 30px 0 20px 0;
+}
+
+footer .footer_info ul.social-media .icons-wrapper > li {
+  cursor: pointer;
 }
 
 footer .footer_info ul.social-media li:not(:last-of-type) {

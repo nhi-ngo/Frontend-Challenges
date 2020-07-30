@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap');
 
 html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 *,
@@ -12,10 +12,10 @@ html {
 }
 
 body {
-  font-family: $font;
-  background-color: $lightBlue;
-  margin: 0;
-  padding: 0;
+	font-family: $font;
+	background-color: $lightBlue;
+	margin: 0;
+	padding: 0;
 }
 
 .overlay {
@@ -24,26 +24,25 @@ body {
 	width: 100vw;
 	height: 100vh;
 	top: 0;
-  left: 0;
-  z-index: -1;
-
+	left: 0;
+	z-index: -1;
 
 	&.show {
-    background-color: rgba(0, 0, 0, 0.5);
-    z-index: 1;
+		background-color: rgba(0, 0, 0, 0.5);
+		z-index: 1;
 	}
 }
 
 .container {
 	margin: 0 auto;
 	padding: 40px 20px 70px;
-  width: 1200px;
+	width: 1200px;
 	max-width: 100%;
-  text-align: center;
+	text-align: center;
 
-  @include breakpoint(medium) {
-    text-align: left;
-  }
+	@include breakpoint(medium) {
+		text-align: left;
+	}
 }
 
 .flex {
@@ -56,8 +55,9 @@ body {
 	flex: 1;
 }
 
-#home, #blog{
-  background-color: $lightGray;
+#home,
+#blog {
+	background-color: $lightGray;
 }
 
 img {
@@ -86,23 +86,27 @@ h3 {
 }
 
 p {
-  color: rgba(0, 0, 0, 0.35);
-  line-height: 1.5;
+	color: rgba(0, 0, 0, 0.35);
+	line-height: 1.5;
 }
 
 button.invite {
-  font-size: inherit;
+	font-size: inherit;
 	font-family: inherit;
 	font-weight: bold;
-	background: linear-gradient(to left, $cyan, $lime);
+	background-image: linear-gradient(to left, $cyan 0%, $lime 50%, $cyan 100%);
+	background-size: 200% auto;
+	box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
 	color: $lightGray;
 	border: 0;
 	outline: none;
 	padding: 13px 30px;
 	border-radius: 50px;
-  cursor: pointer;
+	cursor: pointer;
+	transition: 0.5s;
 
-  &:hover{
-    opacity: 0.6;
-  }
+	&:hover {
+    background-position: right center;
+    opacity: 0.9;
+	}
 }
