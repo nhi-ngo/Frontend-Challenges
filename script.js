@@ -36,6 +36,9 @@ const projects = [
   {
     name: 'social-media-dashboard',
   },
+  {
+    name: 'easybank-landing-page',
+  },
 ];
 
 const list = document.getElementById('list');

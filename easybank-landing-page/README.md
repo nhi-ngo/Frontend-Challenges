@@ -4,4 +4,4 @@
 
 ## LIVE LINK
 
-****
+**https://www.nhingo.com/Frontend-Challenges/easybank-landing-page/index.html**
