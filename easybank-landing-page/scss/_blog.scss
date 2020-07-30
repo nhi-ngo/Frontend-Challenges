@@ -9,7 +9,7 @@ section#blog {
 		flex-direction: column;
 
 		@include breakpoint(medium) {
-      align-items: stretch;
+			align-items: stretch;
 		}
 
 		& > div {
@@ -36,8 +36,8 @@ section#blog {
 
 			&_image {
 				border-radius: 5px 5px 0 0;
-        overflow: hidden;
-        width: 100%;
+				overflow: hidden;
+				width: 100%;
 
 				@include breakpoint(medium) {
 					height: 162px;
@@ -46,10 +46,20 @@ section#blog {
 
 			&_info {
 				text-align: left;
-        padding: 30px;
+				padding: 30px;
 
 				small {
 					color: rgba(0, 0, 0, 0.35);
+				}
+
+				a {
+					text-decoration: none;
+
+					h3 {
+						&:hover {
+							color: $green;
+						}
+					}
 				}
 			}
 		}

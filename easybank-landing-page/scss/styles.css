@@ -426,6 +426,14 @@ section#blog .card_wrapper .card_info small {
   color: rgba(0, 0, 0, 0.35);
 }
 
+section#blog .card_wrapper .card_info a {
+  text-decoration: none;
+}
+
+section#blog .card_wrapper .card_info a h3:hover {
+  color: #1bd7bb;
+}
+
 footer {
   background-color: #2d314d;
   color: #c7c7c7;
